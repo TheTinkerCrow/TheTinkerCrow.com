@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# Secrets — this repo is PUBLIC, nothing sensitive belongs here at all
+.env
+.env.*
+*.pem
+*.key
+
+# Local scratch
+*.log
+tmp/
+drafts/
+
+# Font downloads (TTF zips from Google Fonts); only the converted .woff2 ships
+fonts/src/
+
+# Original photos keep their camera/GPS metadata; only stripped exports ship
+photos-original/

@@ -1,0 +1,43 @@
+/* The Tinker Crow design tokens: fonts and the Apothecary palette.
+   The one place colors are defined; keep in sync with brand/README.md. */
+
+/* Self-hosted, never Google Fonts: the site makes no third-party requests,
+   so a visit leaves no trail anywhere but GitHub Pages. Until the .woff2
+   files are in fonts/ (see fonts/README.md), the fallbacks in the stacks
+   below render instead; nothing breaks. */
+@font-face {
+  font-family: "Fraunces"; src: url("/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces"; src: url("/fonts/Fraunces-Italic.woff2") format("woff2");
+  font-weight: 300 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Figtree"; src: url("/fonts/Figtree.woff2") format("woff2");
+  font-weight: 400 700; font-display: swap;
+}
+@font-face {
+  font-family: "Caveat"; src: url("/fonts/Caveat.woff2") format("woff2");
+  font-weight: 400 700; font-display: swap;
+}
+
+:root {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hand: "Caveat", "Bradley Hand", "Segoe Print", cursive;
+
+  /* Apothecary palette, daylight. --sage is 3.15:1 on --bg: decoration and
+     large display only, never body text. */
+  --bg: #f4eee3; --card: #fbf7ef; --ink: #2b2a26; --forest: #34463a;
+  --muted: #5e5a50; --accent: #97522b; --sage: #7d8b6a; --line: #dcd2bf;
+  --on-forest: #fbf7ef;
+}
+/* Night garden. Every text color re-measured against this --bg. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b221d; --card: #242d27; --ink: #efe7d8; --forest: #c9d6bc;
+    --muted: #b5ad9c; --accent: #e0a177; --sage: #8fa07a; --line: #36423a;
+    --on-forest: #1b221d;
+  }
+}
