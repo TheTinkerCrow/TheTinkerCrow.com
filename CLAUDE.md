@@ -58,8 +58,8 @@ name the maker uses. This is a hard rule, not a style preference.
 - **Photos:** `photos/<slug>.jpg` at 2000px on the long edge (quality 80,
   progressive) and `photos/thumbs/<slug>.jpg` at 640px. Slugs name what's in
   the picture, grouped by prefix (`candle-`, `lantern-`, `light-`, `rust-`,
-  `workshop-`, `lock-`, `garden-`, `glass-`, `bench-`, `cat-`, `dog-`), never
-  the camera filename.
+  `workshop-`, `lock-`, `flower-`, `garden-`, `glass-`, `bench-`, `cat-`,
+  `dog-`), never the camera filename.
 - **`gallery.html`** holds every photo, grouped by theme; the home page shows
   a sample of nine and links to it.
 - **Icon and preview URLs carry `?v=N`.** Bump it whenever one changes.
