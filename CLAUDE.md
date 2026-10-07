@@ -87,13 +87,9 @@ Change colors there and in `css/tokens.css` together.
 
 ## Known gaps
 
-- **Fonts not added yet.** The page renders with fallbacks until the four
-  `.woff2` files are in `fonts/` (see `fonts/README.md`).
 - Set organization membership to private (org → People) so the org page
   doesn't list a personal account.
-- Social images (`og-image.png`, `brand/github-social-preview.png`,
-  `brand/avatar-512.png`) use Lora as a stand-in for Fraunces; re-render once
-  the fonts are in. No `favicon.ico` or `apple-touch-icon.png` yet.
+- No `favicon.ico` or `apple-touch-icon.png` yet.
 - Contact / commission form not built; needs a form service that doesn't
   expose the destination address.
 - No branch protection on `main`. A "require a pull request" rule would block

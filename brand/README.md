@@ -71,5 +71,6 @@ All three SIL OFL, self-hosted from `/fonts/`. See `fonts/README.md`.
 | `github-profile-README.md` | Reference copy of the org profile; the live one is `.github/profile/README.md` |
 | `/og-image.png` (1200×630) | Link previews for thetinkercrow.com |
 
-The PNGs were rendered with Lora standing in for Fraunces. Re-render them once
-the self-hosted fonts are in `fonts/`, and bump `?v=` on `og:image`.
+The social images are drawn as HTML with the self-hosted fonts and captured
+with headless Chrome. Re-render them whenever the copy or the mark changes, and
+bump `?v=` on `og:image`.

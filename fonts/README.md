@@ -26,6 +26,20 @@ pyftsubset "src/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf" \
   --output-file=Fraunces.woff2
 ```
 
-Same command for the italic and the other two families. `--layout-features='*'`
-keeps every OpenType feature; Caveat's handwritten look relies on its
-contextual alternates, which a default subset can drop.
+Same command for the other two families. `--layout-features='*'` keeps every
+OpenType feature; Caveat's handwritten look relies on its contextual
+alternates, which a default subset can drop.
+
+Fraunces gets one extra step first. The full variable font covers weights
+100–900 plus a "soft" axis the site never uses, which made the subset 125 KB
+upright and 154 KB italic. Limiting weight to the 300–700 that `tokens.css`
+declares and fixing softness at its default halves both (66 KB and 80 KB).
+The "wonky" axis stays: it gives Fraunces its leaning letters at display
+sizes.
+
+```sh
+fonttools varLib.instancer "src/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf" \
+  wght=300:700 SOFT=0 -o src/Fraunces-trim.ttf
+```
+
+Then subset `src/Fraunces-trim.ttf` as above, and the same for the italic.
