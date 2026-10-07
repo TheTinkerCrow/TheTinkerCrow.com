@@ -33,8 +33,13 @@ name the maker uses. This is a hard rule, not a style preference.
 - **Every photo ships with all metadata stripped.** The originals carry the
   camera body serial number, which ties every photo from that camera
   together. Exports are re-encoded with no EXIF/XMP and only the stock sRGB
-  profile; check with Pillow before committing (no `Exif`, no `Canon`, no
-  `Lightroom` bytes in the file). Originals never enter this repo.
+  profile. Before committing, read each file's JPEG segments: only JFIF, the
+  sRGB ICC profile and the image tables before the scan data, with no APP1
+  (EXIF/XMP) or APP13 (Photoshop). macOS ImageIO writes both of those even
+  when asked for none, so strip them after exporting. A byte search for `Exif`,
+  `Canon` or `Lightroom` can also match by chance inside the compressed image
+  data; check where a hit sits before rejecting the file. Originals never
+  enter this repo.
 - **Nothing reused** from earlier shops or accounts: no old product photos,
   listings, or copy that a reverse image or text search could match.
 
@@ -52,19 +57,22 @@ name the maker uses. This is a hard rule, not a style preference.
   Revisit if it ever grows a shop or a second language.
 - **Photos:** `photos/<slug>.jpg` at 2000px on the long edge (quality 80,
   progressive) and `photos/thumbs/<slug>.jpg` at 640px. Slugs name what's in
-  the picture, grouped by prefix (`candle-`, `rust-`, `lock-`, `garden-`,
-  `bench-`, `cat-`), never the camera filename.
+  the picture, grouped by prefix (`candle-`, `lantern-`, `light-`, `rust-`,
+  `workshop-`, `lock-`, `garden-`, `glass-`, `bench-`, `cat-`, `dog-`), never
+  the camera filename.
+- **`gallery.html`** holds every photo, grouped by theme; the home page shows
+  a sample of nine and links to it.
 - **Icon and preview URLs carry `?v=N`.** Bump it whenever one changes.
-- Custom domain: `thetinkercrow.com` (the `CNAME` file). Enforce HTTPS in
-  Pages settings once the certificate issues.
+- Custom domain: `thetinkercrow.com` (the `CNAME` file), HTTPS enforced.
 
 ## Git workflow
 
 Defined in the parent `CLAUDE.md`; not restated here.
 
-- Currently on **`release/v0`**: the coming-soon page. `release/v1` is the
-  full site (mediums, pieces, workbench journal, commissions).
 - GitHub Pages deploys from `main`, so merging to `main` *is* publishing.
+- **Merge locally with `--no-ff`, never with GitHub's merge button.** The
+  button authors the merge commit as whoever is signed in to github.com, not
+  as the studio.
 
 ## Brand
 
@@ -81,9 +89,6 @@ Change colors there and in `css/tokens.css` together.
 
 - **Fonts not added yet.** The page renders with fallbacks until the four
   `.woff2` files are in `fonts/` (see `fonts/README.md`).
-- **Initial commit carries a personal author name and email.** It was made on
-  github.com before the studio identity existed. Rewrite it (single commit,
-  nothing depends on it) before the site goes public.
 - Set organization membership to private (org → People) so the org page
   doesn't list a personal account.
 - Social images (`og-image.png`, `brand/github-social-preview.png`,
@@ -91,4 +96,5 @@ Change colors there and in `css/tokens.css` together.
   the fonts are in. No `favicon.ico` or `apple-touch-icon.png` yet.
 - Contact / commission form not built; needs a form service that doesn't
   expose the destination address.
-- Protect `main` in repo Settings → Rules: require a PR, no direct pushes.
+- No branch protection on `main`. A "require a pull request" rule would block
+  the local merges above; only add one that the studio account can bypass.
