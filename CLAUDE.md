@@ -89,7 +89,6 @@ Change colors there and in `css/tokens.css` together.
 
 - Set organization membership to private (org → People) so the org page
   doesn't list a personal account.
-- No `favicon.ico` or `apple-touch-icon.png` yet.
 - Contact / commission form not built; needs a form service that doesn't
   expose the destination address.
 - No branch protection on `main`. A "require a pull request" rule would block

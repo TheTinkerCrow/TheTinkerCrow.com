@@ -66,6 +66,8 @@ All three SIL OFL, self-hosted from `/fonts/`. See `fonts/README.md`.
 |---|---|
 | `/css/tokens.css` | Palette + fonts as CSS variables. The code copy of this guide |
 | `logo-mark.svg` | Source mark, site favicon |
+| `/favicon.ico` | 16, 32 and 48 px for browsers that skip SVG icons. The 16 px drops the wing lines, which blur into the body at that size |
+| `/apple-touch-icon.png` (180×180) | iOS home screen. Square, no transparency; the crow is inset so iOS's rounded corners don't clip the beak or tail |
 | `avatar-512.png` | GitHub org avatar (full-bleed; GitHub rounds the corners) |
 | `github-social-preview.png` (1280×640) | Repo Settings → Social preview. Also copied into the `.github` repo as `profile/banner.png` so the org profile doesn't depend on the site being live; update both together |
 | `github-profile-README.md` | Reference copy of the org profile; the live one is `.github/profile/README.md` |
