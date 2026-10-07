@@ -27,10 +27,14 @@ name the maker uses. This is a hard rule, not a style preference.
   before every push.
 - **No links out** to other sites or social accounts, and no "as seen on".
   Contact happens through a form, never a published email address.
-- **No location.** No town, region, or landmarks in copy. Every photo is
-  exported with metadata stripped (GPS, camera serial, owner name) and shows
-  nothing that identifies a house, street, or vehicle. Originals stay in the
-  gitignored `photos-original/`; only stripped exports are committed.
+- **No location.** No town, region, or landmarks in copy or photos: no
+  house exteriors, streets, trails, signage, or vehicles. Pets and interiors
+  are fine.
+- **Every photo ships with all metadata stripped.** The originals carry the
+  camera body serial number, which ties every photo from that camera
+  together. Exports are re-encoded with no EXIF/XMP and only the stock sRGB
+  profile; check with Pillow before committing (no `Exif`, no `Canon`, no
+  `Lightroom` bytes in the file). Originals never enter this repo.
 - **Nothing reused** from earlier shops or accounts: no old product photos,
   listings, or copy that a reverse image or text search could match.
 
@@ -46,6 +50,10 @@ name the maker uses. This is a hard rule, not a style preference.
 - **Strings are inline in the HTML.** The parent file's string-catalogue rule
   is for apps; this is a small English brochure site with no app behind it.
   Revisit if it ever grows a shop or a second language.
+- **Photos:** `photos/<slug>.jpg` at 2000px on the long edge (quality 80,
+  progressive) and `photos/thumbs/<slug>.jpg` at 640px. Slugs name what's in
+  the picture, grouped by prefix (`candle-`, `rust-`, `lock-`, `garden-`,
+  `bench-`, `cat-`), never the camera filename.
 - **Icon and preview URLs carry `?v=N`.** Bump it whenever one changes.
 - Custom domain: `thetinkercrow.com` (the `CNAME` file). Enforce HTTPS in
   Pages settings once the certificate issues.

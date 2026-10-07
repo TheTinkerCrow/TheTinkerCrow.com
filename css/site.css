@@ -58,5 +58,22 @@ h1 em { font-style: italic; color: var(--accent); }
   background: var(--forest); color: var(--on-forest); font-weight: 600; font-size: 0.95rem;
 }
 
+/* Photo preview: a square grid of thumbnails, each linking to the full
+   image. Square crops keep the mixed portrait/landscape set tidy. */
+.gallery { margin-top: 4rem; }
+.gallery h2 {
+  margin: 0 0 1.25rem; font-family: var(--font-display); font-weight: 400;
+  font-size: 1.75rem; color: var(--forest);
+}
+.gallery ul {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem;
+}
+.gallery a { display: block; border-radius: 0.5rem; }
+.gallery img {
+  display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover;
+  border-radius: 0.5rem; background: var(--card);
+}
+
 footer { padding: 1.5rem 1.25rem 2rem; text-align: center; font-size: 0.875rem; color: var(--muted); }
 footer p { max-width: 36em; margin: 0 auto; }
