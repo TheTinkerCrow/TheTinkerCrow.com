@@ -63,7 +63,7 @@ h1 em { font-style: italic; color: var(--accent); }
    image. Square crops keep the mixed portrait/landscape set tidy. */
 .gallery { margin-top: 4rem; }
 .gallery + .gallery { margin-top: 3rem; }
-.gallery h2 {
+.gallery h2, .gallery h3 {
   margin: 0 0 1.25rem; font-family: var(--font-display); font-weight: 400;
   font-size: 1.75rem; color: var(--forest);
 }
@@ -77,6 +77,33 @@ h1 em { font-style: italic; color: var(--accent); }
   border-radius: 0.5rem; background: var(--card);
 }
 .gallery .more { margin: 1.25rem 0 0; font-weight: 600; }
+
+/* Gallery page: two parts (made by hand, photographs), each a run of
+   .gallery sections, with a jump list at the top. */
+.jump p { margin: 1.5rem 0 0.5rem; font-weight: 600; }
+.jump ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.jump li a {
+  display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.875rem;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--card);
+  color: var(--forest); font-size: 0.95rem; text-decoration: none;
+}
+.jump li a:hover { border-color: var(--accent); }
+.part { margin-top: 4.5rem; }
+.part > h2 {
+  margin: 0; font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(2rem, 6vw, 2.75rem); line-height: 1.1; color: var(--forest);
+}
+.part .gallery { margin-top: 2.5rem; }
+.gallery h3 { display: flex; align-items: center; gap: 0.625rem; font-size: 1.5rem; }
+.swatch {
+  flex: none; width: 0.875rem; height: 0.875rem; border-radius: 50%;
+  border: 1px solid var(--line);
+}
+.sw-green { background: var(--sw-green); }   .sw-yellow { background: var(--sw-yellow); }
+.sw-oranges { background: var(--sw-oranges); } .sw-reds { background: var(--sw-reds); }
+.sw-pinks { background: var(--sw-pinks); }   .sw-purple { background: var(--sw-purple); }
+.sw-blues { background: var(--sw-blues); }   .sw-grays { background: var(--sw-grays); }
+.sw-whites { background: var(--sw-whites); }
 
 footer { padding: 1.5rem 1.25rem 2rem; text-align: center; font-size: 0.875rem; color: var(--muted); }
 footer p { max-width: 36em; margin: 0 auto; }

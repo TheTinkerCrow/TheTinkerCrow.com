@@ -27,9 +27,11 @@ name the maker uses. This is a hard rule, not a style preference.
   before every push.
 - **No links out** to other sites or social accounts, and no "as seen on".
   Contact happens through a form, never a published email address.
-- **No location.** No town, region, or landmarks in copy or photos: no
-  house exteriors, streets, trails, signage, or vehicles. Pets and interiors
-  are fine.
+- **No location in the copy.** No town, region, or landmarks named anywhere.
+  Photos span many years and many trips, so places in them are fine, with
+  these exceptions: the outside of the current home, the maker's own
+  vehicles, readable licence plates, tattoos (crop them out), and anything
+  identifying the people a piece was made for (names, initials, dates).
 - **Every photo ships with all metadata stripped.** The originals carry the
   camera body serial number, which ties every photo from that camera
   together. Exports are re-encoded with no EXIF/XMP and only the stock sRGB
@@ -57,11 +59,16 @@ name the maker uses. This is a hard rule, not a style preference.
   Revisit if it ever grows a shop or a second language.
 - **Photos:** `photos/<slug>.jpg` at 2000px on the long edge (quality 80,
   progressive) and `photos/thumbs/<slug>.jpg` at 640px. Slugs name what's in
-  the picture, grouped by prefix (`candle-`, `lantern-`, `light-`, `rust-`,
-  `workshop-`, `lock-`, `flower-`, `garden-`, `glass-`, `bench-`, `cat-`,
-  `dog-`), never the camera filename.
-- **`gallery.html`** holds every photo, grouped by theme; the home page shows
-  a sample of nine and links to it.
+  the picture, grouped by prefix, never the camera filename. Photographs use
+  what's in them (`candle-`, `lantern-`, `light-`, `rust-`, `workshop-`,
+  `lock-`, `flower-`, `garden-`, `glass-`, `bench-`, `place-`, `car-`,
+  `cat-`, `dog-`); handmade pieces use their material (`glasswork-`,
+  `leather-`, `string-`, `beads-`, `wood-`, `paint-`).
+- **`gallery.html`** has two parts: handmade pieces grouped by material, and
+  photographs grouped by color (six per group, at most two shots of any one
+  piece). The color groups follow the color folders in the photo library.
+  Swatch colors live in `tokens.css`. Photo files that drop out of the
+  gallery stay in `photos/`; the home page shows nine and links to it.
 - **Icon and preview URLs carry `?v=N`.** Bump it whenever one changes.
 - Custom domain: `thetinkercrow.com` (the `CNAME` file), HTTPS enforced.
 

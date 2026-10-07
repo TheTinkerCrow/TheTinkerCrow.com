@@ -32,6 +32,12 @@
   --bg: #f4eee3; --card: #fbf7ef; --ink: #2b2a26; --forest: #34463a;
   --muted: #5e5a50; --accent: #97522b; --sage: #7d8b6a; --line: #dcd2bf;
   --on-forest: #fbf7ef;
+
+  /* Gallery color swatches. They name the photo groups, so they stay the
+     same in both themes; each swatch also carries its color as text. */
+  --sw-green: #5f8a3a; --sw-yellow: #e0b52e; --sw-oranges: #c8642a;
+  --sw-reds: #b8322a; --sw-pinks: #d9548f; --sw-purple: #7d4fa0;
+  --sw-blues: #3f6fa8; --sw-grays: #8a8a86; --sw-whites: #f3efe6;
 }
 /* Night garden. Every text color re-measured against this --bg. */
 @media (prefers-color-scheme: dark) {
