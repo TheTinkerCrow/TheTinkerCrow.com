@@ -66,6 +66,7 @@ All three SIL OFL, self-hosted from `/fonts/`. See `fonts/README.md`.
 |---|---|
 | `/css/tokens.css` | Palette + fonts as CSS variables. The code copy of this guide |
 | `logo-mark.svg` | Source mark, site favicon |
+| `chalk-duck.svg` | The studio's second character, redrawn from a chalk duck in the gallery. Used on the 404 page, where it's inline so it follows the light and dark palette |
 | `/favicon.ico` | 16, 32 and 48 px for browsers that skip SVG icons. The 16 px drops the wing lines, which blur into the body at that size |
 | `/apple-touch-icon.png` (180×180) | iOS home screen. Square, no transparency; the crow is inset so iOS's rounded corners don't clip the beak or tail |
 | `avatar-512.png` | GitHub org avatar (full-bleed; GitHub rounds the corners) |

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 52" role="img" aria-label="A chalk duck">
+  <!-- Drawn from the chalk duck in the gallery as one open line: from the
+       bill up over the head, down the back of the neck, out to the chest,
+       round the belly to the tail, then back along the body as the wing.
+       The ends are the bill and the wing tip; the head never joins the neck.
+       Earlier drafts had a pointed beak (read as a chick) and then closed
+       the line into an outline. -->
+  <g fill="none" stroke="#efe7d8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48.5 15.5C50 11 47.5 5.5 42 5C36 4.5 31 9 31.5 15C32 20 34 23.5 37.5 26C41.5 29 50 30 54 33C58 37 53 42 45 43C32 46 15 41 4 27L38 33.5"/>
+  </g>
+  <circle cx="41" cy="11" r="1.7" fill="#efe7d8"/>
+  <path d="M48.5 14.5C53 13.2 59 13.8 61.5 15.8C62.6 16.8 62 18.3 60.6 18.9C57.5 20.2 52.5 20.6 48 20Z" fill="#e0a177"/>
+  <path d="M31 44l-1.5 4.5M37 44l1.5 4.5M26.5 48.5h4.5M37.5 48.5h4.5" stroke="#e0a177" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
