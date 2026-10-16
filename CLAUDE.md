@@ -63,8 +63,8 @@ name the maker uses. This is a hard rule, not a style preference.
   what's in them (`candle-`, `lantern-`, `light-`, `rust-`, `workshop-`,
   `lock-`, `flower-`, `garden-`, `glass-`, `bench-`, `place-`, `car-`,
   `cat-`, `dog-`); handmade pieces use their material (`glasswork-`,
-  `leather-`, `string-`, `beads-`, `paint-`), and work in progress uses
-  `process-`.
+  `metal-`, `leather-`, `string-`, `beads-`, `paint-`), and work in progress
+  uses `process-`.
 - **`gallery.html`** has two parts. "Made by hand" opens with "On the bench"
   (pieces in progress, choosing materials, layouts) and then groups finished
   pieces by material; it draws only on the edited craft set. "Photographs"
