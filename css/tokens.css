@@ -38,6 +38,9 @@
   --sw-green: #5f8a3a; --sw-yellow: #e0b52e; --sw-oranges: #c8642a;
   --sw-reds: #b8322a; --sw-pinks: #d9548f; --sw-purple: #7d4fa0;
   --sw-blues: #3f6fa8; --sw-grays: #8a8a86; --sw-whites: #f3efe6;
+
+  /* Pastels from the birds doodle, for the gallery divider. Decorative only. */
+  --doodle-blue: #8fc3d6; --doodle-violet: #a99bd1; --doodle-pink: #e8a9b8;
 }
 /* Night garden. Every text color re-measured against this --bg. */
 @media (prefers-color-scheme: dark) {

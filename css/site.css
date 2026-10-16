@@ -114,3 +114,15 @@ footer p { max-width: 36em; margin: 0 auto; }
 .duck-eye { fill: var(--ink); }
 .duck-bill { fill: var(--accent); }
 .duck-feet { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; }
+
+/* Birds-on-a-branch divider between the gallery's two parts, redrawn from the
+   sketchbook doodle. Decorative; hidden from screen readers in the HTML. */
+.birds { display: block; width: 100%; max-width: 34rem; height: auto; margin: 4.5rem auto 0; }
+.b-branch { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linecap: round; }
+.b-branch.thin { stroke-width: 1.8; }
+.b-leaf { fill: var(--sage); }
+.b-bud { fill: var(--doodle-pink); }
+.b-bird.blue { fill: var(--doodle-blue); }
+.b-bird.violet { fill: var(--doodle-violet); }
+.b-beak { fill: var(--accent); }
+.b-eye { fill: var(--ink); }
