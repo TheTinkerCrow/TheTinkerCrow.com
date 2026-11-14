@@ -32,6 +32,10 @@ name the maker uses. This is a hard rule, not a style preference.
   these exceptions: the outside of the current home, the maker's own
   vehicles, readable licence plates, tattoos (crop them out), and anything
   identifying the people a piece was made for (names, initials, dates).
+- **People are welcome in photographs** — the site is a portfolio, and shoots
+  like the ranch day are the work. Ask the people in them before posting
+  (a parent for anyone under 18), and never name them in copy, alt text,
+  slugs or captions. Decided 13 Nov.
 - **Every photo ships with all metadata stripped.** The originals carry the
   camera body serial number, which ties every photo from that camera
   together. Exports are re-encoded with no EXIF/XMP and only the stock sRGB
@@ -61,17 +65,19 @@ name the maker uses. This is a hard rule, not a style preference.
   progressive) and `photos/thumbs/<slug>.jpg` at 640px. Slugs name what's in
   the picture, grouped by prefix, never the camera filename. Photographs use
   what's in them (`candle-`, `lantern-`, `light-`, `rust-`, `workshop-`,
-  `lock-`, `flower-`, `garden-`, `glass-`, `bench-`, `place-`, `car-`,
-  `cat-`, `dog-`); handmade pieces use their material (`glasswork-`,
-  `metal-`, `leather-`, `string-`, `beads-`, `paint-`), and work in progress
-  uses `process-`.
+  `lock-`, `flower-`, `garden-`, `glass-`, `bench-`, `place-`, `car-`, `cat-`,
+  `dog-`, and `ranch-` for the ranch shoot); handmade pieces use their
+  material (`glasswork-`, `metal-`, `leather-`, `string-`, `beads-`,
+  `paint-`), and work in progress uses `process-`.
 - **`gallery.html`** has two parts. "Made by hand" opens with "On the bench"
   (pieces in progress, choosing materials, layouts) and then groups finished
   pieces by material; it draws only on the edited craft set. "Photographs"
-  groups by color, following the color folders in the photo library. At most
-  six per group (nine on the bench) and two shots of any one piece.
-  Swatch colors live in `tokens.css`. Photo files that drop out of the
-  gallery stay in `photos/`; the home page shows nine and links to it.
+  opens with shoots (a nine-photo preview of the ranch, linking to the full
+  shoot on `ranch.html`) and then groups by color, following the color folders
+  in the photo library. At most six per group (nine on the bench and the
+  ranch) and two shots of any one piece. Swatch colors live in `tokens.css`.
+  Photo files that drop out of the gallery stay in `photos/`; the home page
+  shows nine and links to it.
 - **Icon and preview URLs carry `?v=N`.** Bump it whenever one changes.
 - Custom domain: `thetinkercrow.com` (the `CNAME` file), HTTPS enforced.
 
