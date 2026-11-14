@@ -13,41 +13,40 @@ to anyone.
 - No internal notes, drafts, or anything not yet announced.
 - A mistake in history is public even after it's deleted. Check before pushing.
 
-## The studio stands on its own
+## The studio and its maker
 
-The Tinker Crow is deliberately **not linked** to any other site, account, or
-name the maker uses. This is a hard rule, not a style preference.
+Until 14 Nov 2026 the studio was deliberately kept apart from the maker's
+name, other sites and old accounts. That separation is lifted: the maker is
+happy to be named and linked. Decided 14 Nov.
 
-- **No personal names** in pages, metadata, `LICENSE`, or commits. The
-  copyright holder is "The Tinker Crow".
-- **Commit identity for this repo is the studio's**, not a personal one: a
-  repo-local `user.name` of `The Tinker Crow` and a studio email that is not
-  attached to any personal GitHub account (a personal `noreply` address
-  contains that account's username). Check `git log --format='%an <%ae>'`
-  before every push.
-- **No links out** to other sites or social accounts, and no "as seen on".
-  Contact happens through a form, never a published email address.
-- **No location in the copy.** No town, region, or landmarks named anywhere.
-  Photos span many years and many trips, so places in them are fine, with
-  these exceptions: the outside of the current home, the maker's own
-  vehicles, readable licence plates, tattoos (crop them out), and anything
-  identifying the people a piece was made for (names, initials, dates).
+- **The maker's name may appear** in pages, metadata and `LICENSE`. The
+  copyright holder is still "The Tinker Crow" until a page says otherwise.
+- **Links out are fine**: other sites (salesforcegirl.org included), social
+  accounts, and work posted elsewhere before.
+- **Contact** can be a published email address or a form; neither is required.
+- **Commit identity** may be the studio's or the maker's own. The repo-local
+  identity is still `The Tinker Crow <hello@thetinkercrow.com>`; change it in
+  the repo config rather than per commit.
+- **Earlier work can be reused**, including photos and listings that were
+  posted under old accounts.
+- **Never name the town**, and never show the outside of the current home.
+  That is about physical safety, not separation, and it stays.
+- **Places in photos are fine**, and so are the maker's vehicles and tattoos.
+  Keep out readable licence plates and anything identifying the people a
+  piece was made for (names, initials, dates): those belong to other people.
 - **People are welcome in photographs** — the site is a portfolio, and shoots
   like the ranch day are the work. Ask the people in them before posting
   (a parent for anyone under 18), and never name them in copy, alt text,
   slugs or captions. Decided 13 Nov.
-- **Every photo ships with all metadata stripped.** The originals carry the
-  camera body serial number, which ties every photo from that camera
-  together. Exports are re-encoded with no EXIF/XMP and only the stock sRGB
-  profile. Before committing, read each file's JPEG segments: only JFIF, the
-  sRGB ICC profile and the image tables before the scan data, with no APP1
-  (EXIF/XMP) or APP13 (Photoshop). macOS ImageIO writes both of those even
-  when asked for none, so strip them after exporting. A byte search for `Exif`,
-  `Canon` or `Lightroom` can also match by chance inside the compressed image
-  data; check where a hit sits before rejecting the file. Originals never
-  enter this repo.
-- **Nothing reused** from earlier shops or accounts: no old product photos,
-  listings, or copy that a reverse image or text search could match.
+- **Every photo ships with all metadata stripped.** Location, camera serial
+  and editing details don't belong on a public page. Exports are re-encoded
+  with no EXIF/XMP and only the stock sRGB profile. Before committing, read
+  each file's JPEG segments: only JFIF, the sRGB ICC profile and the image
+  tables before the scan data, with no APP1 (EXIF/XMP) or APP13 (Photoshop).
+  macOS ImageIO writes both of those even when asked for none, so strip them
+  after exporting. A byte search for `Exif`, `Canon` or `Lightroom` can also
+  match by chance inside the compressed image data; check where a hit sits
+  before rejecting the file. Originals never enter this repo.
 
 ## How it's built
 
@@ -103,8 +102,6 @@ Change colors there and in `css/tokens.css` together.
 
 ## Known gaps
 
-- Set organization membership to private (org → People) so the org page
-  doesn't list a personal account.
 - Contact / commission form not built; needs a form service that doesn't
   expose the destination address.
 - No branch protection on `main`. A "require a pull request" rule would block
