@@ -55,8 +55,15 @@ happy to be named and linked. Decided 14 Nov.
 - **Styles live in `css/`, not in the HTML.** `css/tokens.css` holds the fonts
   and palette as CSS variables and is the one place colors are defined;
   `css/site.css` uses only `var(--…)`, never hex values.
-- **No third-party requests.** Fonts are self-hosted (never Google Fonts), no
-  CDNs, no analytics, no embeds. See `fonts/README.md`.
+- **No third-party requests, with one decided exception.** Fonts are
+  self-hosted (never Google Fonts), no CDNs, no embeds. See `fonts/README.md`.
+- **Visit counts (decided 25 Nov):** GoatCounter, site code `thetinkercrow`, no
+  cookies, no personal data. `count.js` at the root is GoatCounter's own script,
+  pinned; its count goes to `thetinkercrow.goatcounter.com`. Each page has the
+  script line before `</body>` and a canonical link (same URL as its `og:url`),
+  and the footer says visits are counted. A new page gets all three. The 404
+  page isn't counted. To update count.js, replace it from
+  `https://gc.zgo.at/count.js`, read the diff and bump `?v=` on every page.
 - **Strings are inline in the HTML.** The parent file's string-catalogue rule
   is for apps; this is a small English brochure site with no app behind it.
   Revisit if it ever grows a shop or a second language.
